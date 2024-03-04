@@ -1,0 +1,14 @@
+.subsidiosDetalle-section {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.subsidiosDetalle-section h2 {
+    color: #010849;
+    margin-bottom: 10px;
+}
+
+.subsidiosDetalle-section p {
+    font-size: 16px;
+    line-height: 1.5;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsidios - Subsecretaría de Hacienda</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/oficinas.css">
+    <link rel="stylesheet" href="../css/subsidios.css">
+</head>
+
+<body>
+
+<style>
+    body {
+        background-image: url('../img/fondo.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 99% 99%;
+        align-items: center;
+    }
+</style>
+
+<header>
+    <nav>
+        <div class="logo-titulo">
+            <a href="../index.html" id="logo">
+                <img src="../img/logo.png" alt="Logo de la Subsecretaría de Hacienda">
+            </a>
+            <h1>Subsecretaría de Hacienda</h1>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul id="menu" class="menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/subsidios.html">Subsidios</a></li>
+            <li><a href="../html/oficinas.html">Oficinas</a></li>
+            <li><a href="../html/beneficiarios.html">Beneficiarios</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Subsidios Disponibles</h2>
+        <div id="subsidios-list" class="subsidios-list"></div>
+
+        <div class="subsidio">
+            <h3>Subsidio para el Suministro de Agua</h3>
+            <p>Apoyamos a los residentes de Concordia facilitando subsidios para el suministro de agua. Este subsidio tiene como objetivo aliviar la carga financiera asociada con los costos del servicio de agua, asegurando el acceso continuo a este recurso esencial.</p>
+            <button onclick="abrirFormulario('agua')">Solicitar Subsidio</button>
+        </div>
+
+        <div class="subsidio">
+            <h3>Subsidio para Aporte de Jubilación</h3>
+            <p>Contribuimos al bienestar de nuestros ciudadanos ofreciendo un subsidio para el aporte de jubilación. Este apoyo financiero busca mejorar la seguridad financiera de los jubilados, garantizando un retiro más cómodo y tranquilo.</p>
+            <button onclick="abrirFormulario('jubilacion')">Solicitar Subsidio</button>
+        </div>
+
+        <div class="subsidio">
+            <h3>Subsidio para Educación y Capacitación</h3>
+            <p>Impulsamos el acceso a la educación y la formación continua. Este subsidio está diseñado para apoyar a estudiantes y profesionales que buscan mejorar sus habilidades y conocimientos mediante programas educativos y de capacitación.</p>
+            <button onclick="abrirFormulario('educacion')">Solicitar Subsidio</button>
+        </div>
+
+        <div class="subsidio">
+            <h3>Subsidio para Vivienda y Desarrollo Urbano</h3>
+            <p>Fomentamos el desarrollo urbano sostenible y el acceso a viviendas dignas. Este subsidio proporciona apoyo financiero para proyectos de vivienda asequible y mejoras en el desarrollo urbano.</p>
+            <button onclick="abrirFormulario('vivienda')">Solicitar Subsidio</button>
+        </div>
+
+        <div id="formularioContainer"></div>
+    </section>
+</main>
+
+<script>
+    function abrirFormulario(tipoSubsidio) {
+        var urlFormulario = 'formulario.html?subsidio=' + tipoSubsidio;
+        window.open(urlFormulario, '_blank', 'width=600,height=400,scrollbars=yes');
+    }
+</script>
+
+<footer>
+    <p>&copy; 2023 Subsecretaría de Hacienda - Municipalidad de Concordia</p>
+</footer>
+
+<script src="../js/subsidios.js"></script>
+
+</body>
+
+</html>

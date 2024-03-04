@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Subsidio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/formulario.css">
+    
+    <style>
+        
+        body {
+            background-color: #fa4a1e;
+        }
+
+        #formulario-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #resultado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="formulario-container">
+    <h2>Formulario de Subsidio</h2>
+    <form onsubmit="verificarBeneficiario(); return false;">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" required>
+
+        <label>¿Es beneficiario?</label>
+        <label for="si">Sí</label>
+        <input type="radio" id="si" name="beneficiario" value="si" required>
+        <label for="no">No</label>
+        <input type="radio" id="no" name="beneficiario" value="no" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="resultado"></div>
+</div>
+
+<script>
+    function verificarBeneficiario() {
+        var nombre = document.getElementById('nombre').value;
+        var dni = document.getElementById('dni').value;
+        var esBeneficiario = document.querySelector('input[name="beneficiario"]:checked').value;
+        if (esBeneficiario === 'si') {
+            document.getElementById('resultado').innerHTML = `¡${nombre}, usted ya puede disfrutar del subsidio como beneficiario!`;
+        } else {
+            document.getElementById('resultado').innerHTML = `${nombre}, usted no es un beneficiario de la Municipalidad de Concordia. Por favor, haga clic <a href="../html/beneficiarios.html">aquí</a> para registrarse como beneficiario.`;
+        }
+    }
+</script>
+
+</body>
+</html>

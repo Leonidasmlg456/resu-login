@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneficiarios - Subsecretaría de Hacienda</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/oficinas.css">
+    <link rel="stylesheet" href="../css/beneficiarios.css">
+    <style>
+        body {
+            background-image: url('../img/fondo.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            align-items: center;
+            margin: 0; 
+        }
+
+        main {
+            padding: 20px; 
+        }
+
+        .beneficios-info {
+            max-width: 800px; 
+            margin: auto; 
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .beneficios-info img {
+            max-width: 100%; 
+            display: block;
+            margin: auto; 
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo-titulo">
+            <a href="../index.html" id="logo">
+                <img src="../img/logo.png" alt="Logo de la Subsecretaría de Hacienda">
+            </a>
+            <h1>Subsecretaría de Hacienda</h1>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul id="menu" class="menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/subsidios.html">Subsidios</a></li>
+            <li><a href="../html/oficinas.html">Oficinas</a></li>
+            <li><a href="../html/beneficiarios.html">Beneficiarios</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="beneficios-info">
+        <img src="../img/logo.png" alt="Logo de la Subsecretaría de Hacienda">
+
+        <h2>Beneficios de Ser Beneficiario</h2>
+        <p>Como beneficiario de la Municipalidad de Concordia, obtienes acceso a una variedad de subsidios diseñados para mejorar tu calidad de vida.</p>
+
+        <h2>¿En qué me beneficia pedir subsidios?</h2>
+        <p>Al solicitar subsidios, puedes recibir ayuda financiera para cubrir costos específicos, como suministro de agua, aporte de jubilación, entre otros. Esto alivia la carga económica y contribuye al bienestar de la comunidad.</p>
+
+        <h2>Requisitos para Ser Beneficiario</h2>
+        <p>Los requisitos para ser beneficiario pueden variar según el tipo de subsidio. Sin embargo, en general, se espera que los solicitantes cumplan con ciertos criterios, como residir en Concordia y cumplir con los criterios establecidos por la Subsecretaría de Hacienda.</p>
+    </section>
+
+    <div class="formulario-popup">
+        <h2>Formulario de Registro de Beneficiario</h2>
+        <form id="registroBeneficiarioForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <p></p>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+            <p></p>
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" placeholder="DNI" required>
+            <p></p>
+            <button type="button" onclick="registrarBeneficiario()">Registrar Beneficiario</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2023 Subsecretaría de Hacienda - Municipalidad de Concordia</p>
+</footer>
+<script src="../js/beneficiarios.js"></script>
+</body>
+</html>
